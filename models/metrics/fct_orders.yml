@@ -1,0 +1,7 @@
+semantic_models:
+  - name: orders
+    description: Order fact table. This table is at the order grain with one row per order.
+    model: ref('fct_orders')
+    entities:
+      - name: order_id
+        type: primary

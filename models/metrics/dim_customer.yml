@@ -1,0 +1,7 @@
+semantic_models:
+  - name: customer
+    description: Customer fact table. This table has the historic group info of the customers.
+    model: ref('dim_customer')
+    entities:
+      - name: customer_id
+        type: primary
