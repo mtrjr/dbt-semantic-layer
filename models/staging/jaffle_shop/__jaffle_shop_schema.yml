@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: stg_jaffle_shop__customers
+    description: Staging reference of the name of customers that have bought at the shop
+    columns:
+          - name: customer_id
+            description: Identifier of the customer (Primary Key)
+          - name: customer_name
+            description: Full name of the customer (First Name + Last Name)
+  - name: stg_jaffle_shop__items
+    description: Staging reference of items that are being for sell at the shop
+    columns:
+          - name: item_id
+            description: Identifier of the item (Primary Key)
+          - name: name
+            description: Order Identifier related to the item
+          - name: sku
+            description: Reference of the object - id of the product
+  - name: orders
+    description: Staging reference of the orders made at the shop
+    columns:
+          - name: id
+            description: Identifier of the order (Primary Key)
+          - name: customer
+            description: Identifier of the customer
+          - name: ordered_at
+            description: date of the order
+          - name: store_id
+            description: Identifier of the store
+          - name: subtotal
+            description: price of the item without taxes
+          - name: tax_paid
+            description: taxes aplied to the item.
+          - name: order_total
+            description: tax_paid + subtotal
+  - name: products
+    description: Staging reference of products that are being sold on the shop
+    columns:
+          - name: sku
+            description: Identifier of the order (Primary Key)
+          - name: name
+            description: Name of the product
+          - name: type
+            description: type of the the product
+          - name:  price
+            description: price of the product
+          - name: description
+            description: description of the product
+  - name: stores
+    description: Staging reference of physical stores
+    columns:
+          - name: store_id
+            description: Identifier of the store - Primary key
+          - name: store_name
+            description: Name of the store.
+          - name: opened_at
+            description: date of the opening of the shop
+          - name: tax_rate
+            description: tax that have to pay the shop.
+  - name: supplies
+    description: Staging reference of the name of supplies of the shop
+    columns:
+          - name: supply_id
+            description: Identifier of the supplies
+          - name: cost
+            description:  How much does the store spend on the supplied
+          - name: supply_name
+            description: Name of the supplied
+          - name: perishable
+            description: boolean that identifier if the product has expiration date.
+          - name: product_id
+            description: reference of the object - Identifier of the product
+
+          
+
