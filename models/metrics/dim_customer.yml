@@ -5,3 +5,11 @@ semantic_models:
     entities:
       - name: customer_id
         type: primary
+    dimensions:
+      - name: first_name
+        type: categorical
+      - name: last_name_1
+        type: categorical
+      - name: last_name_2
+        type: categorical
+

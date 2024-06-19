@@ -14,8 +14,8 @@ renamed as (
         ordered_at,
         store_id,
         subtotal,
-        tax_paid,
-        order_total
+        {{cents_to_dollars(column_name='tax_paid' ,precision=4)}} as tax_paid,
+        {{cents_to_dollars(column_name='order_total',precision=4)}} as order_total 
     from source
 
 )

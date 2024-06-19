@@ -5,3 +5,10 @@ semantic_models:
     entities:
       - name: order_id
         type: primary
+    dimensions:
+      - name: is_drink_order
+        type: categorical
+      - name: is_food_order
+        type: categorical
+   
+   

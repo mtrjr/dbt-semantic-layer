@@ -21,7 +21,7 @@ products_sold as (
             sum(tax_paid) as total_tax_paid_for_products,
             sum(order_total) as total_paid_for_products,
             count(distinct customer_id) as n_customer_buys,
-            sum(supplies.cost) as order_cost,
+            sum(supplies.cost) as supply_cost,
             sum(case when products.product_type='jaffle' then 1 else 0 end) as count_food_items,
             sum(case when products.product_type='beverage' then 1 else 0 end) as count_drink_items
     from products
