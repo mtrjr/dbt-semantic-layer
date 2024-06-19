@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: A clone of postgres application
+    database: RAW
+    schema: stripe
+    tables:
+      - name: payment
+        description: Raw data of payment done related to a order
+        columns:
+          - name: id
+            description: primary key
+          - name: orderid
+            description: primary key of order table.
+          - name: paymentmethod
+            description: "{{doc('payment_method')}}"
+          - name: status
+            description: "{{doc('payment_status')}}"
+          - name: amount
+            description: amount of money paid
+          - name: CREATED
+            description: the day of the sale
+          - name: _BATCHED_AT
+            description: the day it's been bulked on the data

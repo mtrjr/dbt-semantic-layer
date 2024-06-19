@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_stripe__payments
+    description: This model cleans up payments data
+    columns:
+      - name: payment_id
+      - name: order_id
+      - name: payment_method
+      - name: status
+      - name: amount
+        description: amount is stored in cents, convert it to dollars
+      - name: created_at
+        
+ 
